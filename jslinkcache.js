@@ -24,12 +24,11 @@
       );      
       $('a.js-link-cacheable').click(
         function () {
-          var url = $(this).attr('href');
           var id = $(this).attr('id');
         
           if(id) {
             if(contentHash[id]) {
-              $('html').html("something");
+              $('html').html(contentHash[id]);
               return false;
             }
           }
