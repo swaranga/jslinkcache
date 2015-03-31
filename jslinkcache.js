@@ -26,11 +26,9 @@
         function () {
           var id = $(this).attr('id');
         
-          if(id) {
-            if(contentHash[id]) {
-              $('html').html(contentHash[id]);
-              return false;
-            }
+          if(id && contentHash[id]) {
+            $('html').html(contentHash[id]);
+            return false;
           }
           return true;
         });
